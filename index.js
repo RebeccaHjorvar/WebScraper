@@ -12,7 +12,7 @@ axios(url)
         const html = res.data
         const $ = cheerio.load(html)
         const names = []
-        $('.product-title', html).each(() => {
+        $('.product-title', html).each(function() { 
             const name = $(this).text()
             names.push(name)
         })
